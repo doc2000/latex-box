@@ -28,3 +28,11 @@ $ vagrant up --provider=libvirt
 $ vagrant ssh latex-box -- sudo salt-call state.highstate
 $ vagrant ssh latex-box -- sudo salt-call state.sls latex
 ```
+
+
+## Building handbooks
+
+```
+$ vagrant ssh latex-box -- sudo salt-call state.sls handbook
+$ vagrant scp latex-box:/opt/doc2000/dist .
+```
